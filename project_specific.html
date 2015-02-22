@@ -25,8 +25,7 @@
 		
 		<script type="text/javascript">
 			function showContent() {
-			    $( "#front-pic" ).show(1000);
-				$( "#about-content" ).show(1000);
+			    $( "#projects-title" ).show(1000);
 			}
 			window.onload = showContent;
         </script>
@@ -34,6 +33,27 @@
 	</head>
 	<body>
 		
+		<script>
+			//alert(window.location.search.substring(1));
+			
+			function getUrlParameter(sParam)
+				{
+					var sPageURL = window.location.search.substring(1);
+					var sURLVariables = sPageURL.split('&');
+					for (var i = 0; i < sURLVariables.length; i++) 
+					{
+						var sParameterName = sURLVariables[i].split('=');
+						if (sParameterName[0] == sParam) 
+						{
+							return sParameterName[1];
+						}
+					}
+				}   
+			
+			var project_id = getUrlParameter('project_id');
+			
+			alert(project_id);
+		</script>
 		<div class="container" id ="nav-container">
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
@@ -51,8 +71,8 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="index.html">About <span class="sr-only">(current)</span></a></li>
-				<li><a href="projects.html">Projects</a></li>
+				<li><a href="index.html">About</a></li>
+				<li class="active"><a href="projects.html">Projects <span class="sr-only">(current)</span></a></li>
 				<li><a href="contact.html">Contact</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -70,18 +90,8 @@
 		  </div>  
 		  
 		  <div class="row" id="content-main">
-			<div class="col-sm-4" id="front-pic">
-			  <img src="images/db.png" alt="Damien Beard - The Roaming Dev" class="img-rounded"/>
-			</div>
-			<div class="col-sm-8" id="about-content">
-			  <p>Hi, I’m Damien! I graduated from a Bachelor of Software Engineering (Honours) from The Australian National University (ANU) at the end of 2014. I have completed an ICT Cadetship at Australia’s Department of Foreign Affairs and Trade, where I was involved in Applications Development along with Server and Desktop support. I wrote a thesis about the feasibility of Software Engineering learning things from other disciplines (specifically Mental Health research). </p>
-			  <p>I have built various websites and applications over the years and have recently become involved with the start-up scene in Canberra, Australia. I am currently involved with establishing a pathway for entrepreneurship at ANU’s College of Engineering and Computer Science through the TechLauncher initiative.</p>
-			  <p>I love to travel, I am an enthusiastic yet somewhat hopeless basketball player and enjoy social tennis. If you would like to get in contact with me, this is the place to do it! </p>
-			</div>
-			<div class="col-sm-12" id="bottom-buttons">      
-			  <a class="btn btn-primary btn-lg" href="projects.html" role="button">Projects</a>
-			  <a class="btn btn-primary btn-lg" href="contact.html" role="button">Contact</a>
-			</div>
+			
+			
 		  </div>
 		  
 		  <div class="row">

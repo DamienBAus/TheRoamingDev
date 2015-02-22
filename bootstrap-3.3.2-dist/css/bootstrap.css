@@ -4858,7 +4858,9 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
-  background-image: url(../../images/topBanner_blue.png);
+  background-image: url(../../images/topBanner_blue_pattern.png);
+  /*background-image: url(../../images/header_bg_colour.png);
+  background-repeat: repeat;*/
 }
 .jumbotron .container {
   max-width: 100%;
@@ -6569,9 +6571,15 @@ button.close {
 #front-pic, #social-media-buttons {
 	text-align:center;
 	display:none;
+	padding-bottom: 15px;
 }
 
-#about-content, #projects-title, #contact-content {
+#front-pic img {
+	max-width:100%;
+	max-height:100%;
+}
+
+#about-content, #projects-title, #contact-content, .thumbnail{
 	display:none;
 }
 
@@ -6593,8 +6601,90 @@ button.close {
 
 #content-footer {
 	text-align:right;
-	background: url(../../images/bottom-banner-blue.png);
+	background: url(../../images/topBanner_blue_pattern.png) no-repeat left bottom;
 	background-repeat: repeat-x;
 	background-color: #FFFFFF;
-	border-radius: 6px;
+	margin-top: 20px;
+}
+
+body {
+	background-color:#FFFFFF;
+}
+
+.container {
+	background-color:#FFFFFF;
+}
+
+#content-header {
+	background-color: #FFFFFF;
+	padding: 30px 15px;
+    margin-bottom: 30px;
+    color: inherit;
+}
+
+#content-header h1,
+#content-header .h1 {
+  color: inherit;
+}
+#content-header p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+#content-header > hr {
+  border-top-color: #d5d5d5;
+}
+.container #content-header,
+.container-fluid #content-header {
+  background-image: url(../../images/topBanner_blue_pattern.png);
+}
+
+@media screen and (min-width: 768px) {
+  #content-header {
+    padding: 48px 0;
+  }
+  .container #content-header,
+  .container-fluid #content-header {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  #content-header h1,
+  #content-header .h1 {
+    font-size: 63px;
+  }
+}
+
+#content-container {
+	background-color: #FFFFFF;
+	margin-bottom: 20px;
+	-moz-background-clip: content;     /* Firefox 3.6 */
+    -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+    background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+#content-container  .row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#nav-container {
+	background-color: transparent;
+}
+
+body {
+	background-image: url(../../images/maze_bg.png);
+}
+
+#social-media-buttons img:hover{
+	opacity: 0.6;
+}
+
+div.thumbnail:hover,
+div.thumbnail:focus,
+div.thumbnail.active {
+  border-color: #337ab7;
+}
+
+.thumbnail .project_image:hover img{
+	opacity: 0.6;
 }

@@ -1,0 +1,59 @@
+{
+"projects":
+	[
+		{
+			"ID":"TAAG",
+			"title":"Trade at a Glance",
+			"category":"Work",
+			"blurb":"Australia's Trade at a Glance complements the annual Trade at a Glance publication, allowing users to investigate Australia's trade profile. It brings together information from a range of Department of Foreign Affairs and Trade publications in the one location for the first time.",
+			"fullText":"",
+			"link":"http://www.dfat.gov.au/trade/resources/trade-at-a-glance/Pages/default.aspx",
+			"role":"Developer/Designer"
+		},
+		{
+			"ID":"beardys",
+			"title":"Beardy's Beard Oil",
+			"category":"Fun",
+			"blurb":"Beardy's is really, super cool.",
+			"fullText":"",
+			"link":"http://beardys.com.au/",
+			"role":"Web Developer/Designer"
+		},
+		{
+			"ID":"techLauncher",
+			"title":"TechLauncher Program at ANU",
+			"category":"Work",
+			"blurb":"",
+			"fullText":"",
+			"link":"http://cs.anu.edu.au/TechLauncher",
+			"role":"Launch Co-ordinator"
+		},
+		{
+			"ID":"thesis",
+			"title":"Learning from each other: An Interdisciplinary Approach to Software Engineering",
+			"category":"Academic",
+			"blurb":"",
+			"fullText":"",
+			"link":"",
+			"role":"Author"
+		},
+		{
+			"ID":"XMDS",
+			"title":"XMDS",
+			"category":"Academic",
+			"blurb":"",
+			"fullText":"",
+			"link":"http://www.xmds.org/",
+			"role":"Developer"
+		},
+		{
+			"ID":"kMeans",
+			"title":"K-Means Document Clusterer",
+			"category":"Fun",
+			"blurb":"",
+			"fullText":"",
+			"link":"",
+			"role":"Developer"
+		}
+	]
+}
