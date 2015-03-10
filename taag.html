@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Damien Beard - Software Engineer</title>
+		<!--link rel="stylesheet" type="text/css" href="style.css" /-->
+		<script src="jquery-1.11.1.min.js"></script>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.3.2-dist/css/bootstrap.css" rel="stylesheet">
+		<!-- Bootstrap theme -->
+		<link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+		
+		<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="js/navbar.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			function showContent() {
+			    $( "#project-pic" ).show(1000);
+				$( "#about-content" ).show(1000);
+			}
+			window.onload = showContent;
+        </script>
+
+	</head>
+	<body>
+		
+		<div class="alert alert-danger" role="alert" id="jSWarning"></div>
+		<div class="container" id ="nav-container"></div>
+		
+		<script>
+		    document.getElementById('jSWarning').style.display = 'none';
+			jQuery(document).ready(function($){
+				load_navbar("Projects");
+			});
+		</script>
+
+		<div class="container" id="content-container">
+		
+		  <div class="row" >
+			<div class="col-sm-12" id="content-header">      
+			  <h1>damien <span class="blue">beard</span></h1>
+			  <p>Software Engineer. Traveller. Always Learning. </p> 
+			</div>
+		  </div>  
+		  
+		  <div class="row" id="">
+			<div class="col-sm-5" id="project-pic">
+			  <img src="images/taag_thumb.png" alt="Trade At a Glance" class="img-rounded"/>
+			</div>
+			<div class="col-sm-7" id="project-text">
+			  <div id="project-header"><h1><a href="http://www.dfat.gov.au/trade/resources/trade-at-a-glance/Pages/default.aspx"  target="_blank"> Trade At A Glance </a></h1></div>
+			  <h4><strong>Developer/Designer (Work)</strong></h4>
+			  <p>Australia’s Trade at a Glance complements the annual Trade at a Glance publication, allowing users to investigate Australia’s trade profile. It brings together information from a range of Department of Foreign Affairs and Trade publications in the one location for the first time.
+			  </p><p>
+			  I was involved with generating content based on spreadsheets of data, exported from a SQL database. I was also involved with the functionality and style of the website, and was heavily involved with the JavaScript-based map used throughout the site.
+			  </p>
+			  <div id="projectSpecificButtons">
+				  <a class="btn btn-primary btn-lg" href="http://www.dfat.gov.au/trade/resources/trade-at-a-glance/Pages/default.aspx" role="button"  target="_blank">Visit Site</a>
+				  <a class="btn btn-default btn-lg" href="projects.html" role="button">Back to Projects</a>
+			  </div>
+			</div>
+		  </div>
+			
+		  
+		  <div class="row">
+			<div class="col-sm-12" id="content-footer">      
+			  <img src="images/footer_icons.png" class="img-rounded"/>
+			</div>
+			
+		  </div>
+		</div>
+	</body>
+</html>

@@ -34,13 +34,17 @@ jQuery(document).ready(function($){
 					  '<p><a href="project_specific.html?project_id='+jsonProjects.projects[i].ID+'" class="btn btn-primary" role="button">Read More</a> <a  href="'+jsonProjects.projects[i].link+'" class="btn btn-default" role="button" target="_blank">Visit site</a></p>\n'+
 					'</div>\n'+
 				  '</div>\n'+
-				'</div>'
+				'</div>';
 				$('#projects_list').html($('#projects_list').html()+projects_list);
 				
 				setTimeout(function(){
 					$( ".thumbnail" ).show(1000);
 				}, 400);
 			}
+			
+			$('html,body').animate({
+			  scrollTop: $("#content-main").offset().top
+			}, 1500);
 			//$('#projects_list').html(projects_list);
 			
 			
