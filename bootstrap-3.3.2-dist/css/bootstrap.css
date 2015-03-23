@@ -4858,7 +4858,7 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
-  background-image: url(../../images/topBanner_blue_pattern.png);
+  background-image: url(../../images/topBanner_blue_bars.png);
   /*background-image: url(../../images/header_bg_colour.png);
   background-repeat: repeat;*/
 }
@@ -6601,7 +6601,7 @@ button.close {
 
 #content-footer {
 	text-align:right;
-	background: url(../../images/topBanner_blue_pattern.png) no-repeat left bottom;
+	background: url(../../images/topBanner_blue_bars.png) no-repeat left bottom;
 	background-repeat: repeat-x;
 	background-color: #FFFFFF;
 	margin-top: 20px;
@@ -6636,7 +6636,7 @@ body {
 }
 .container #content-header,
 .container-fluid #content-header {
-  background-image: url(../../images/topBanner_blue_pattern.png);
+  background-image: url(../../images/topBanner_blue_bars.png);
 }
 
 @media screen and (min-width: 768px) {
@@ -6732,4 +6732,30 @@ div.thumbnail.active {
 #project-pic img{
 	max-width:100%;
 	max-height:100%;
+}
+
+#content-header h1, #content-header .h1 {
+	color: #FFF;
+	background-color: #000;
+	padding: 20px;
+	margin-bottom: 0px;
+	margin-left: -60px;
+	margin-right: -60px;
+	padding-left: 60px;
+}
+
+#content-subtitle {
+	background-color: #c0e9fb;
+	padding-left: 20px;
+	padding-right: 100px; 
+	padding-bottom: 10px;
+	display: block;
+	max-width:650px;
+}
+
+@media (max-device-width: 768px) {
+  #content-header h1, #content-header .h1 {
+    margin-left: 0px;
+	margin-right: 0px;
+  }
 }
