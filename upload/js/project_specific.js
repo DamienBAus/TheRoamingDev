@@ -1,5 +1,3 @@
-/** Author: Damien Beard, 2015 **/
-
 /* The first step is to pull the  project id from the URL */
 
 function getUrlParameter(sParam)
@@ -48,14 +46,6 @@ jQuery(document).ready(function($){
 				
 				if (jsonProjects.projects[i].ID==project_id) {
 					
-					/* This checks to see if the 'View' button should say something different 
-				   than the default ;View' text. One use case is when it is a document instead
-				   of a webpage */
-				    var viewText = "Visit Site";
-					if (jsonProjects.projects[i].viewText) {
-						viewText = jsonProjects.projects[i].viewText
-					}
-					
 					/*
 					<div class="col-sm-5" id="project-pic">
 					  <img src="images/taag_thumb.png" alt="Trade At a Glance" class="img-rounded"/>
@@ -81,7 +71,7 @@ jQuery(document).ready(function($){
 								   '<h4><strong>'+jsonProjects.projects[i].role+' ('+jsonProjects.projects[i].category+')</strong></h4>\n'+
 								   '<p>'+jsonProjects.projects[i].fullText+'</p>\n'+
 								   '<div id="projectSpecificButtons">\n'+
-						           '<a class="btn btn-primary btn-lg" href="'+jsonProjects.projects[i].link+'" role="button"  target="_blank">'+viewText+'</a>\n'+
+						           '<a class="btn btn-primary btn-lg" href="'+jsonProjects.projects[i].link+'" role="button"  target="_blank">Visit Site</a>\n'+
 						           '<a class="btn btn-default btn-lg" href="projects.html" role="button">Back to Projects</a>\n'+
 								   '</div>\n'+
 					               '</div>';

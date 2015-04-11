@@ -42,13 +42,16 @@
 		
 		<script type="text/javascript">
 			function showContent() {
+				$( "#loadingBarContainer" ).hide(100);
 			    $( "#projects-title" ).show(1000);
+				$( ".thumbnail" ).show(1000);
 			}
 			window.onload = showContent;
         </script>
 		
 		<noscript>
             <style>#projects-title{display:block;}</style>
+			<style>#loadingBarContainer{display:none;}</style>
         </noscript>
 
 	</head>
@@ -69,11 +72,12 @@
 		  <div class="row" >
 			<div class="col-sm-12" id="content-header">      
 			  <h1>damien <span class="blue">beard</span></h1>
-			  <p><span id="content-subtitle">Software Engineer. Systems Thinker. Always Learning. </span></p> 
+			  <p><span id="content-subtitle">Software Engineer | Systems Thinker | Always Learning </span></p> 
 			</div>
 		  </div>  
 		  
 		  <div class="row" id="content-main">
+		  
 			<div class="col-sm-12" id="projects-title">
 			  <h3>Projects I have worked on</h3>
 			  <p>Below are a selection of projects that I have worked on for work, academic purposes or just for fun. Click on each one for more information.</p>
@@ -85,6 +89,14 @@
           </noscript>
 		  
 		  <div class="row">
+			
+			<div id="loadingBarContainer">
+				<div class="progress" id="loadingBar">
+				  <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+					<span class="sr-only">Loading Content</span>
+				  </div>
+				</div>
+		    </div>
 			
 			<div id="projects_list"></div>
 			

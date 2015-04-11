@@ -6579,7 +6579,7 @@ button.close {
 	max-height:100%;
 }
 
-#about-content, #contact-content, .thumbnail{
+#about-content, #projects-title, #contact-content, .thumbnail{
 	display:none;
 }
 
@@ -6726,7 +6726,7 @@ div.thumbnail.active {
 }
 
 #projectSpecificButtons  a{
-	margin: 5px;
+	margin: 0px 5px;
 }
 
 #project-pic img{
@@ -6746,8 +6746,8 @@ div.thumbnail.active {
 
 #content-subtitle {
 	background-color: #c0e9fb;
-	padding-left: 50px;
-	padding-right: 20px; 
+	padding-left: 20px;
+	padding-right: 100px; 
 	padding-bottom: 10px;
 	display: block;
 	max-width:650px;
@@ -6758,26 +6758,4 @@ div.thumbnail.active {
     margin-left: 0px;
 	margin-right: 0px;
   }
-}
-
-#loadingBarContainer {
-	width:100%;
-	padding-left: 10%;
-}
-
-#loadingBar {
-	width: 90%;
-}
-
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{
-	color: #5BCDF1;
-}
-
-#blog-photos img {
-	width: 100%;
-	padding: 10px;
-}
-
-#bottom-blog-photos img {
-
 }

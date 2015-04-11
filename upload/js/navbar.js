@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 		var pages = ["About", "Projects", "Contact"];
 		var links = ["index.html", "projects.html", "contact.html"];
 		
-		var navbar_html = '<nav class="navbar navbar-inverse">\n'+
+		var navbar_html = '<nav class="navbar navbar-default">\n'+
 		  '<div class="container-fluid">\n'+
 			'<!-- Brand and toggle get grouped for better mobile display -->\n'+
 			'<div class="navbar-header">\n'+

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<title>Damien Beard - Specific Project Details</title>
+		<meta name="description" content="Contact Damien Beard Software Engineer" />
+		<meta name="keywords" content="Contact Damien Beard Software Engineer" />
+		<title>Damien Beard - Contact Me</title>
 		<!--link rel="stylesheet" type="text/css" href="style.css" /-->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		
@@ -14,10 +14,6 @@
 		<link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet">
 		
 		<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
-		
-		<script src="js/navbar.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/project_specific.js" type="text/javascript" charset="utf-8"></script>
-
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -30,25 +26,23 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-60757294-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>		
-		
 		<script src="js/navbar.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript">
 			function showContent() {
-			    $( "#projects-title" ).show(1000);
+			    $( "#social-media-buttons" ).show(1000);
+				setTimeout(continueExecution, 200);
+			}
+			function continueExecution() {
+			   $( "#contact-content" ).show(1000);
 			}
 			window.onload = showContent;
         </script>
+		
+		<noscript>
+            <style>#social-media-buttons{display:block;}</style>
+			<style>#contact-content{display:block;}</style>
+        </noscript>
 
 	</head>
 	<body>
@@ -59,7 +53,7 @@
 		<script>
 			document.getElementById('jSWarning').style.display = 'none';
 			jQuery(document).ready(function($){
-				load_navbar("Projects");
+				load_navbar("Contact");
 			});
 		</script>
 
@@ -68,23 +62,22 @@
 		  <div class="row" >
 			<div class="col-sm-12" id="content-header">      
 			  <h1>damien <span class="blue">beard</span></h1>
-			  <p><span id="content-subtitle">Software Engineer | Systems Thinker | Always Learning </span></p> 
+			  <p><span id="content-subtitle">Software Engineer. Systems Thinker. Always Learning. </span></p> 
 			</div>
 		  </div>  
 		  
-		  <div class="row" id="project_details">
+		  <div class="row" id="content-main">
+			<div class="col-sm-12" id="social-media-buttons">      
+			  <a href="https://twitter.com/DamienBAus" target="_blank"><img src="images/twitter.png" class="img-social"/></a>
+			  <a href="http://www.linkedin.com/pub/damien-beard/79/48a/692" target="_blank"><img src="images/linkedin.png" class="img-social"/></a>
+			  <a href="https://github.com/DamoBAus" target="_blank"><img src="images/github.png" class="img-social"/></a>
+			</div>
 			
+			<div class="col-sm-12" id="contact-content">
+			  <h2>Contact Me</h2>
+			  <p>To get in contact with me, please try the social media profiles above, or e-mail <a href="mailto:info@theroamingdev.com?Subject=Contact%20from%20TheRoamingDev%20website" target="_top">info@theroamingdev.com</a></p>
+			</div>
 		  </div>
-		  
-		  <script>
-			jQuery(document).ready(function($){
-				display_project_data();
-			});
-		  </script>
-		  
-		  <noscript>
-            <div class="alert alert-danger" role="alert" id="jSWarning"></div>
-          </noscript>
 		  
 		  <div class="row">
 			<div class="col-sm-12" id="content-footer">      
