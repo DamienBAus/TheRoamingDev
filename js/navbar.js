@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	
 	function load_navbar(pageTitle) {
 		var pages = ["About", "Projects", "Contact"];
-		var links = ["index.html", "projects.html", "contact.html"];
+		var links = ["http://theroamingdev.com", "projects.html", "contact.html"];
 		
 		var navbar_html = '<nav class="navbar navbar-inverse">\n'+
 		  '<div class="container-fluid">\n'+
