@@ -6778,6 +6778,58 @@ div.thumbnail.active {
 	padding: 10px;
 }
 
-#bottom-blog-photos img {
+#projectThumbs {
+	max-width:100%;
+	max-height: 200px;
+	height: 200px;
+	background-color: #FFFFFF;
+	display:none;
+	bottom: 0px;
+	margin-bottom: 0;
+	position: fixed;
+	right: 0;
+	left: 0;
+}
 
+@media (min-width: 768px) {
+  #projectThumbs {
+    display:block;
+  }
+}
+#thumbImgWrapper {
+	max-width:100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	bottom: 0px;
+	display:block;
+	height: 160px;
+}
+
+#projectThumbsTitle {
+	text-align: center;
+}
+
+#projectThumbsImages {
+	height: 160px;
+}
+
+#thumbsPlaceholder {
+	margin-bottom: 0px;
+}
+
+#projectThumbsImages  img{
+	width: 100px;
+}
+
+#projectThumbsImages .thumbnail {
+	margin-bottom: 0px;
+	display: block;
+}
+
+#projectThumbsImages h6{
+	text-align:center;
+}
+
+.activeThumb {
+	border: 2px solid #03b1ed;
 }

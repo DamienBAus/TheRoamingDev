@@ -45,7 +45,6 @@ jQuery(document).ready(function($){
 		$.when( load_projects() ).done(function(res1) {
 			for(i=0; i < jsonProjects.projects.length; i++)
 			{
-				
 				if (jsonProjects.projects[i].ID==project_id) {
 					
 					/* This checks to see if the 'View' button should say something different 
@@ -94,11 +93,59 @@ jQuery(document).ready(function($){
 				$( "#project-pic" ).show(1000);
 			}
 			
+			construct_project_thumbnails();
+			
 			
 		})
 		.fail(function() {
 			console.log( 'I fire if one or more requests failed.' );
 		});
+	}
+	
+	// Find the appropriate information and make some HTML out of it!
+	function construct_project_thumbnails() {
+	
+		var projects_list = '<div class="row">';
+		var activeThumb = ""
+		for(i=0; i < jsonProjects.projects.length; i++)
+			{
+				
+				var projectTitle = jsonProjects.projects[i].title;
+				var truncateVal = projectTitle.substring(25, projectTitle.length).search(" ");
+				if (truncateVal > -1) {
+					projectTitle = projectTitle.substring(0,25+truncateVal)+"...";
+				}
+				
+				activeThumb = "";
+				if (jsonProjects.projects[i].ID==project_id) {
+					activeThumb = "activeThumb";
+				}
+				
+				projects_list += '<div class="col-sm-2 lowerThumbDiv">\n'+
+				  '<div class="thumbnail '+activeThumb+'" id="'+jsonProjects.projects[i].ID+'_project" >\n'+
+					'<a href="project_specific.html?project_id='+jsonProjects.projects[i].ID+'" class="project_image">\n'+
+					  '<img src="images/'+jsonProjects.projects[i].ID+'_thumb.png" alt="'+jsonProjects.projects[i].title+'">\n'+
+					'</a>\n'+
+					  '<h6><a href="project_specific.html?project_id='+jsonProjects.projects[i].ID+'">'+projectTitle+' </a></h6>\n'+
+					'</div>\n'+
+				  '</div>';
+				
+				//Write the constructed HTML to the page
+				if (i==jsonProjects.projects.length-1) {
+					projects_list += '</div>';
+					$('#projectThumbsImages').html($('#projectThumbsImages').html()+projects_list);
+				}
+				
+			}
+			
+			$('#projectThumbs').css('bottom', "-"+$('#projectThumbsImages').outerHeight()+"px");
+			$('#projectThumbs').hover(function() {
+				$(this).stop().animate({ bottom: 0 }, 'fast');
+			  }, function() {
+				$(this).stop().animate({ bottom: "-"+$('#projectThumbsImages').outerHeight()+"px" }, 'fast');
+			  });
+			$('#projectThumbsImages').css('width', 100/6*jsonProjects.projects.length+"%"); 
+			$('.col-sm-2').css('width', (100/jsonProjects.projects.length)+'%'); 
 	}
 	
 	window.display_project_data = display_project_data;

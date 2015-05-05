@@ -24,7 +24,6 @@ jQuery(document).ready(function($){
 		$.when( load_projects() ).done(function(res1) {
 			for(i=0; i < jsonProjects.projects.length; i++)
 			{
-				//projects_list += '<a class="country_list_item" href="#" inc="'+i+'" dataid="'+jsonProjects.projects[i].ID+'">'+jsonProjects.projects[i].title+'</a>';
 				
 				/* This checks to see if the 'View' button should say something different 
 				   than the default 'View' text. One use case is when it is a document instead
@@ -36,9 +35,13 @@ jQuery(document).ready(function($){
 					viewText = "Visit Site";
 				}
 				
+				if (i%3==0) {
+					projects_list = ""
+					projects_list += '<div class="row">\n';
+				}
 				
-				projects_list = '<div class="col-sm-4">\n'+
-				  '<div class="thumbnail" id="'+jsonProjects.projects[i].ID+'_project">\n'+
+				projects_list += '<div class="col-sm-4">\n'+
+				  '<div class="thumbnail thumbnail-row-'+(Math.floor(i/3)+1)+'" id="'+jsonProjects.projects[i].ID+'_project">\n'+
 					'<a href="project_specific.html?project_id='+jsonProjects.projects[i].ID+'" class="project_image">\n'+
 					  '<img src="images/'+jsonProjects.projects[i].ID+'_thumb.png" alt="'+jsonProjects.projects[i].title+'">\n'+
 					'</a>\n'+
@@ -49,9 +52,17 @@ jQuery(document).ready(function($){
 					'</div>\n'+
 				  '</div>\n'+
 				'</div>';
-				$('#projects_list').html($('#projects_list').html()+projects_list);
+				
+				if (i%3==2 || i==jsonProjects.projects.length-1) {
+					projects_list += '</div>';
+					$('#projects_list').html($('#projects_list').html()+projects_list);
+				}
+				
+				
+				
 				
 			}
+			
 			
 			// Make it look pretty with animations
 			$('html,body').animate({
