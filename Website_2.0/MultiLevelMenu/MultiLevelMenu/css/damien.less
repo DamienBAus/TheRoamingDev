@@ -1,0 +1,73 @@
+.nav-info {
+	color: #bdbdbd;
+}
+
+.menu__wrap ul{
+	width: 100%;
+	overflow: auto;
+}
+
+.portfolio-nav {
+	nav {
+		background: #1c1d22;
+	}
+	
+	.menu__breadcrumbs {
+		box-shadow: none;
+	}
+	
+	.menu__wrap {
+		top: 4.1em;
+		
+		.menu__item{
+			width: 100%;
+		}
+		
+		.menu__link {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			
+			.fa-fw {
+				padding-right: 50px;
+				padding-left: 10px;
+			}
+		}
+		
+	}
+	
+	.fa-fw {
+		padding-right: 30px;
+		vertical-align: middle;
+	}
+	
+	.contact-item{
+		text-align: center;
+		
+		.nav-info{
+			width: 200px;
+			
+			text-align: left;
+			
+			/* We need to over-ride Materliaize's transition delay to stop these buttons reappearing */
+			-webkit-transition: initial;
+			transition: initial;
+			
+			.contact-icon{
+				padding-right: 40px;
+				padding-left: 15px;
+				padding-bottom: 4px;
+				font-size: 22px;
+			}
+		}
+	}
+	
+	.mobile-only{
+		display: none;
+	}
+	
+	@media screen and (max-width: 40em) {
+		.mobile-only{
+			display: block;
+		}
+	}
+}
