@@ -1,9 +1,82 @@
-.nav-info {
+body {
+  background-color: #2a2b30;
   color: #bdbdbd;
 }
-.menu__wrap ul {
-  width: 100%;
-  overflow: auto;
+.container.home {
+  width: 95%;
+}
+.container.home .home-card .about-me-image-container {
+  height: 0;
+  padding-bottom: 69%;
+  overflow: hidden;
+  background-image: url("../img/profile_pic.png");
+  background-position: center;
+  background-size: cover;
+}
+.container.home .home-card .card-content {
+  text-align: center;
+}
+@media screen and (min-width: 1190px) {
+  .container.home .home-card .about-me-image-container {
+    padding-bottom: 560px;
+  }
+}
+.container.home a .card:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.3), 0 4px 15px 0 rgba(0, 0, 0, 0.3);
+}
+.container.home .card-block {
+  padding-top: 30px;
+}
+.container.home .card-block .card-content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-header .profile-image-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 120px;
+  padding: 30px 0 0 0;
+  text-align: center;
+  color: #3b3d4a;
+  background: #1c1d22;
+  z-index: 1;
+}
+.menu-header .profile-image-block .profile-icon-holder .profile-icon-container img:hover {
+  opacity: 0;
+}
+.menu-header .profile-image-block .profile-icon-holder .profile-icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  background-image: url("../img/profile_icon2.jpg");
+  background-size: contain;
+}
+.menu-header .profile-image-block .profile-icon-holder .profile-icon-container img {
+  width: 80px;
+  border-radius: 100%;
+}
+.menu-header .profile-image-block .profile-icon-holder::after {
+  display: block;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  z-index: -3;
+  margin-top: -83px;
+  left: calc(50% - 43px);
+  border-radius: 50%;
+  border: 1px solid #bdbdbd;
+  content: "";
+}
+.menu-header .profile-image-block .profile-name {
+  color: #bdbdbd;
+  margin-top: 10px;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .portfolio-nav nav {
   background: #1c1d22;
@@ -11,11 +84,18 @@
 .portfolio-nav .menu__breadcrumbs {
   box-shadow: none;
 }
+.portfolio-nav .menu__breadcrumbs a:first-child {
+  line-height: 30px;
+}
 .portfolio-nav .menu__wrap {
   top: 4.1em;
 }
 .portfolio-nav .menu__wrap .menu__item {
   width: 100%;
+}
+.portfolio-nav .menu__wrap ul {
+  width: 100%;
+  overflow: auto;
 }
 .portfolio-nav .menu__wrap .menu__link {
   padding-top: 0px;
@@ -24,6 +104,13 @@
 .portfolio-nav .menu__wrap .menu__link .fa-fw {
   padding-right: 50px;
   padding-left: 10px;
+}
+.portfolio-nav .menu__wrap .menu__link .material-icons {
+  display: inline;
+  vertical-align: middle;
+  padding-right: 17px;
+  padding-left: 10px;
+  font-size: 33px;
 }
 .portfolio-nav .fa-fw {
   padding-right: 30px;
@@ -35,12 +122,18 @@
 .portfolio-nav .contact-item .nav-info {
   width: 200px;
   text-align: left;
+  /* We need to over-ride Materliaize's transition delay to stop these buttons reappearing */
+  -webkit-transition: initial;
+  transition: initial;
 }
 .portfolio-nav .contact-item .nav-info .contact-icon {
   padding-right: 40px;
   padding-left: 15px;
   padding-bottom: 4px;
   font-size: 22px;
+}
+.portfolio-nav .contact-item.first-button {
+  padding-top: 20px;
 }
 .portfolio-nav .mobile-only {
   display: none;
@@ -49,8 +142,4 @@
   .portfolio-nav .mobile-only {
     display: block;
   }
-}
-.portfolio-nav .nav-info {
-  -webkit-transition: initial;
-  transition: initial;
 }

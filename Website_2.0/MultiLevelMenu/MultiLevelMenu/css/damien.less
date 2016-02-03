@@ -1,19 +1,136 @@
-.nav-info {
+body {
+	background-color: #2a2b30;
+	
 	color: #bdbdbd;
 }
 
-.menu__wrap ul{
-	width: 100%;
-	overflow: auto;
+.container{
+  &.home{
+    width: 95%;
+
+    .home-card {
+      .about-me-image-container{
+        height: 0;
+        padding-bottom: 69%;
+        overflow: hidden;
+
+        background-image: url("../img/profile_pic.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .card-content{
+        text-align: center;
+      }
+
+      // Stop the 'About' card from growing and taking up the whole screen
+      @media screen and (min-width: 1190px) {
+        .about-me-image-container{
+          padding-bottom: 560px;
+        }
+      }
+    }
+
+    a .card:hover {
+      box-shadow: 0 5px 11px 0 rgba(0,0,0,0.30),0 4px 15px 0 rgba(0,0,0,0.30);
+    }
+
+    .card-block{
+      padding-top:30px;
+
+      .card-content{
+        p{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+}
+
+.menu-header{
+  .profile-image-block{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 120px;
+    padding: 30px 0 0 0;
+    text-align: center;
+    color: #3b3d4a;
+    background: #1c1d22;
+    z-index: 1;
+
+    .profile-icon-holder {
+
+      &:hover{
+        .profile-icon-container img{
+          opacity: 0;
+        }
+      }
+      .profile-icon-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: auto;
+        background-image: url("../img/profile_icon2.jpg");
+        background-size: contain;
+
+        img{
+          width: 80px;
+          border-radius: 100%;
+        }
+      }
+
+
+      &::after {
+        display: block;
+        width: 86px;
+        height: 86px;
+
+        position: absolute;
+        z-index: -3;
+        margin-top: -83px;
+        left: ~"calc(50% - 43px)";
+
+        border-radius: 50%;
+        border: 1px solid #bdbdbd;
+
+        content: "";
+      }
+    }
+
+    .profile-name {
+      color: #bdbdbd;
+      margin-top: 10px;
+      font-size: 0.75em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
 }
 
 .portfolio-nav {
+
+	.nav-info {
+		//color: #bdbdbd;
+	}
+	
 	nav {
 		background: #1c1d22;
 	}
 	
 	.menu__breadcrumbs {
 		box-shadow: none;
+		
+		a{
+			&:first-child {
+				line-height: 30px;
+			}
+		}
 	}
 	
 	.menu__wrap {
@@ -21,6 +138,11 @@
 		
 		.menu__item{
 			width: 100%;
+		}
+		
+		ul {
+			width: 100%;
+			overflow: auto;
 		}
 		
 		.menu__link {
@@ -31,6 +153,14 @@
 				padding-right: 50px;
 				padding-left: 10px;
 			}
+			
+			.material-icons {
+				display: inline;
+				vertical-align: middle;
+				padding-right: 17px;
+				padding-left: 10px;
+				font-size: 33px;
+			}
 		}
 		
 	}
@@ -40,7 +170,7 @@
 		vertical-align: middle;
 	}
 	
-	.contact-item{
+	.contact-item {
 		text-align: center;
 		
 		.nav-info{
@@ -58,6 +188,10 @@
 				padding-bottom: 4px;
 				font-size: 22px;
 			}
+		}
+		
+		&.first-button{
+			padding-top: 20px;
 		}
 	}
 	

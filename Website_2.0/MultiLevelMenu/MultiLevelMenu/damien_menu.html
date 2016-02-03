@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/materialize.css"> <!-- Materialize style -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Materialize icons -->
 	
 	<!-- demo styles -->
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -25,12 +26,18 @@
 
 <body>
 	<!-- Main container -->
-	<div class="container">
+	<div class="container home">
 		<!-- Blueprint header -->
-		<header class="bp-header cf">
-			<div class="dummy-logo">
-				<span class="fa fa-globe fa-4x"></span>
-				<h2 class="dummy-heading">Damien Beard</h2>
+		<header class="bp-header cf menu-header">
+			<div class="profile-image-block">
+				<div class="profile-icon-holder">
+
+						<div class="profile-icon-container">
+							<a href="#"><img src="img/profile_icon.jpg" /></a>
+						</div>
+
+				</div>
+				<h2 class="profile-name">Damien Beard</h2>
 			</div>
 		</header>
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
@@ -55,10 +62,10 @@
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="#" id="modal-trigger" data-type="cd-modal-trigger">
-							<span class="fa fa-weixin fa-fw fa-2x"></span>Contact
+							<i class="material-icons">chat</i></span>Contact
 						</a>
 					</li>
-					<li class="menu__item contact-item">
+					<li class="menu__item contact-item first-button">
 						<a class="waves-effect waves-light btn teal darken-1 nav-info">
 							<span class="fa fa-envelope fa-fw contact-icon"></span>Email
 						</a>
@@ -87,19 +94,76 @@
 			
 		</nav>
 		<div class="content">
-			<p class="info">Please choose a category</p>
 			<!-- Ajax loaded content here -->
 			
-			<!-- Materialize card -->
-			    <div class="row">
-				  <div class="col s12 m5">
-					<div class="card-panel teal">
-					  <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-					  I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-					  </span>
+				<!-- Materialize card -->
+				<div class="row card-block">
+					<div class="col s12 m12">
+						<a href="#">
+							<div class="card home-card">
+								<div class="card-image about-me-image-container">
+								</div>
+								<div class="card-content">
+									<p class="teal-text text-darken-2">ABOUT</p>
+								</div>
+							</div>
+						</a>
 					</div>
-				  </div>
+
+					<div class="col s12 m6 l4">
+						<a href="#">
+							<div class="card home-card">
+								<div class="card-image">
+									<img src="img/taag_thumb.png">
+								</div>
+								<div class="card-content">
+									<p class="teal-text text-darken-2">PROJECT: Trade at a Glance</p>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="#">
+							<div class="card home-card">
+								<div class="card-image">
+									<img src="img/taag_thumb.png">
+								</div>
+								<div class="card-content">
+									<p class="teal-text text-darken-2">PROJECT: Trade at a Glance</p>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="#">
+							<div class="card home-card">
+								<div class="card-image">
+									<img src="img/taag_thumb.png">
+								</div>
+								<div class="card-content">
+									<p class="teal-text text-darken-2">PROJECT: Trade at a Glance</p>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="#">
+							<div class="card home-card">
+								<div class="card-image">
+									<img src="img/taag_thumb.png">
+								</div>
+								<div class="card-content">
+									<p class="teal-text text-darken-2">PROJECT: Trade at a Glance</p>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
+				
+				
 		</div>
 		
 		<div class="cd-modal" data-modal="modal-trigger">
