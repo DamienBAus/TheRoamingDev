@@ -49,11 +49,6 @@ a {
 	outline: none;
 }
 
-a:hover {
-	color: #ddd;
-}
-
-
 /* Blueprint header */
 
 .bp-header {

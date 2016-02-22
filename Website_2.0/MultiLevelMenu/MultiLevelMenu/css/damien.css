@@ -1,24 +1,60 @@
+/* Variables */
 body {
-  background-color: #2a2b30;
   color: #bdbdbd;
+  background: radial-gradient(#222324 16%, transparent 16%) 0 0, radial-gradient(#222324 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 20%) 8px 9px;
+  background-color: #2a2b30;
+  background-size: 16px 16px;
 }
 .container.home {
   width: 95%;
 }
+.container.home .home-card {
+  /* Keep the about card at the right height for responsiveness */
+}
 .container.home .home-card .about-me-image-container {
   height: 0;
-  padding-bottom: 69%;
+  padding-bottom: 70%;
   overflow: hidden;
-  background-image: url("../img/profile_pic.png");
-  background-position: center;
+  background-image: url("../img/profile_pic.jpg");
+  background-position-x: 50%;
+  background-position-y: 25%;
+  background-size: cover;
+}
+.container.home .home-card .contact-container {
+  height: 0;
+  padding-bottom: 30%;
+  overflow: hidden;
+  background-image: url("../img/contact.jpg");
+  background-position-x: 50%;
+  background-position-y: 80%;
   background-size: cover;
 }
 .container.home .home-card .card-content {
   text-align: center;
 }
-@media screen and (min-width: 1190px) {
+@media screen and (min-width: 993px) {
   .container.home .home-card .about-me-image-container {
-    padding-bottom: 560px;
+    padding-bottom: 97%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .container.home .home-card .about-me-image-container {
+    padding-bottom: 96%;
+  }
+}
+@media screen and (min-width: 1109px) {
+  .container.home .home-card .about-me-image-container {
+    padding-bottom: 95%;
+  }
+}
+@media screen and (min-width: 1172px) {
+  .container.home .home-card .about-me-image-container {
+    padding-bottom: 94%;
+  }
+}
+@media screen and (min-width: 1239px) {
+  .container.home .home-card .about-me-image-container {
+    padding-bottom: 93%;
   }
 }
 .container.home a .card:hover {
@@ -44,9 +80,6 @@ body {
   background: #1c1d22;
   z-index: 1;
 }
-.menu-header .profile-image-block .profile-icon-holder .profile-icon-container img:hover {
-  opacity: 0;
-}
 .menu-header .profile-image-block .profile-icon-holder .profile-icon-container {
   width: 80px;
   height: 80px;
@@ -58,6 +91,9 @@ body {
 .menu-header .profile-image-block .profile-icon-holder .profile-icon-container img {
   width: 80px;
   border-radius: 100%;
+}
+.menu-header .profile-image-block .profile-icon-holder .profile-icon-container img:hover {
+  opacity: 0;
 }
 .menu-header .profile-image-block .profile-icon-holder::after {
   display: block;
@@ -78,11 +114,19 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 40em) {
+  .menu-header .profile-image-block {
+    display: none;
+  }
+}
 .portfolio-nav nav {
   background: #1c1d22;
 }
 .portfolio-nav .menu__breadcrumbs {
   box-shadow: none;
+}
+.portfolio-nav .menu__breadcrumbs a {
+  color: #1e7bd2;
 }
 .portfolio-nav .menu__breadcrumbs a:first-child {
   line-height: 30px;
@@ -100,6 +144,15 @@ body {
 .portfolio-nav .menu__wrap .menu__link {
   padding-top: 0px;
   padding-bottom: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.portfolio-nav .menu__wrap .menu__link:hover {
+  color: #1e7bd2;
+}
+.portfolio-nav .menu__wrap .menu__link:hover::after {
+  color: #1e7bd2;
 }
 .portfolio-nav .menu__wrap .menu__link .fa-fw {
   padding-right: 50px;
@@ -111,6 +164,12 @@ body {
   padding-right: 17px;
   padding-left: 10px;
   font-size: 33px;
+}
+.portfolio-nav .menu__wrap .menu__link .menu-link-name {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 .portfolio-nav .fa-fw {
   padding-right: 30px;
@@ -142,4 +201,8 @@ body {
   .portfolio-nav .mobile-only {
     display: block;
   }
+}
+/* Override material's default green behaviour */
+button:focus {
+  background-color: inherit;
 }

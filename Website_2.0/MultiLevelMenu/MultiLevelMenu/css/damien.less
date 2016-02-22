@@ -1,7 +1,13 @@
+/* Variables */
+@mainColor: #1e7bd2;
+
 body {
-	background-color: #2a2b30;
 	
-	color: #bdbdbd;
+  color: #bdbdbd;
+
+  background: radial-gradient(#222324 16%, transparent 16%) 0 0, radial-gradient(#222324 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.05) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.05) 15%, transparent 20%) 8px 9px;
+  background-color: #2a2b30;
+  background-size: 16px 16px;
 }
 
 .container{
@@ -11,11 +17,23 @@ body {
     .home-card {
       .about-me-image-container{
         height: 0;
-        padding-bottom: 69%;
+        padding-bottom: 70%;
         overflow: hidden;
 
-        background-image: url("../img/profile_pic.png");
-        background-position: center;
+        background-image: url("../img/profile_pic.jpg");
+        background-position-x: 50%;
+        background-position-y: 25%;
+        background-size: cover;
+      }
+
+      .contact-container{
+        height: 0;
+        padding-bottom: 30%;
+        overflow: hidden;
+
+        background-image: url("../img/contact.jpg");
+        background-position-x: 50%;
+        background-position-y: 80%;
         background-size: cover;
       }
 
@@ -23,10 +41,35 @@ body {
         text-align: center;
       }
 
-      // Stop the 'About' card from growing and taking up the whole screen
-      @media screen and (min-width: 1190px) {
+      /* Keep the about card at the right height for responsiveness */
+      @media screen and (min-width: 993px) {
         .about-me-image-container{
-          padding-bottom: 560px;
+          padding-bottom: 97%;
+        }
+      }
+
+      @media screen and (min-width: 1050px) {
+        .about-me-image-container{
+          padding-bottom: 96%;
+        }
+      }
+
+      @media screen and (min-width: 1109px) {
+        .about-me-image-container{
+          padding-bottom: 95%;
+        }
+      }
+
+      @media screen and (min-width: 1172px) {
+        .about-me-image-container{
+          padding-bottom: 94%;
+        }
+      }
+
+      // Stop the 'About' card from growing and taking up the whole screen
+      @media screen and (min-width: 1239px) {
+        .about-me-image-container{
+          padding-bottom: 93%;
         }
       }
     }
@@ -65,11 +108,6 @@ body {
 
     .profile-icon-holder {
 
-      &:hover{
-        .profile-icon-container img{
-          opacity: 0;
-        }
-      }
       .profile-icon-container {
         width: 80px;
         height: 80px;
@@ -81,6 +119,10 @@ body {
         img{
           width: 80px;
           border-radius: 100%;
+
+          &:hover{
+            opacity: 0;
+          }
         }
       }
 
@@ -111,6 +153,12 @@ body {
     }
   }
 
+  @media screen and (max-width: 40em) {
+    .profile-image-block {
+      display: none;
+    }
+  }
+
 }
 
 .portfolio-nav {
@@ -127,6 +175,8 @@ body {
 		box-shadow: none;
 		
 		a{
+          color: @mainColor;
+
 			&:first-child {
 				line-height: 30px;
 			}
@@ -148,6 +198,18 @@ body {
 		.menu__link {
 			padding-top: 0px;
 			padding-bottom: 0px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:hover{
+              color: @mainColor;
+
+              &::after{
+                color: @mainColor;
+              }
+            }
 			
 			.fa-fw {
 				padding-right: 50px;
@@ -161,6 +223,13 @@ body {
 				padding-left: 10px;
 				font-size: 33px;
 			}
+
+          .menu-link-name{
+            text-transform: uppercase;
+            font-size: 0.85em;
+            font-weight: 300;
+            letter-spacing: 2px;
+          }
 		}
 		
 	}
@@ -204,4 +273,10 @@ body {
 			display: block;
 		}
 	}
+}
+
+/* Override material's default green behaviour */
+
+button:focus {
+  background-color: inherit;
 }
