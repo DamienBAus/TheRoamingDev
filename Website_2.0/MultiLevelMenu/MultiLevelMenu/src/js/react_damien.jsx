@@ -88,7 +88,7 @@ var Project = React.createClass({
         project = self.props.projectData;
 
     return (
-      <div className="col s12 m6 l4">
+      <div className="col s12 m6 l4 xl3">
       <a href="#">
         <div className="card home-card">
           <div className="card-image">

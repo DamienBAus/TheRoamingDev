@@ -280,3 +280,23 @@ body {
 button:focus {
   background-color: inherit;
 }
+
+/* Extend Material's 980 max grid: */
+@media only screen and (min-width: 1900px) {
+  .container{
+    max-width: 1600px;
+  }
+
+  .loop(@counter) when (@counter > 0) {
+    .loop((@counter - 1));    // next iteration
+
+    .row .col.xl@{counter} {
+      width: ((100% * @counter) / 12);
+      margin-left: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+
+  .loop(12); // launch the loop
+}
