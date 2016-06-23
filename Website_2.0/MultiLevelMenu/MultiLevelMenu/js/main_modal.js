@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 	});
 
 	function initModal(modalTrigger) {
-		var modalTriggerId =  modalTrigger.attr('id'),
+		var modalTriggerId =  modalTrigger.data('modal-id'),
 			modal = $('.cd-modal[data-modal="'+ modalTriggerId +'"]'),
 			svgCoverLayer = modal.children('.cd-svg-bg'),
 			paths = svgCoverLayer.find('path'),

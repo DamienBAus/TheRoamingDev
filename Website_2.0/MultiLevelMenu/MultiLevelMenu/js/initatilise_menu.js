@@ -124,6 +124,7 @@
 							ev.preventDefault();
 							// open it
 							self._openSubMenu(subMenuEl, pos, itemName);
+							filterProjects({hide: true});
 						}
 						else {
 							// add class current
@@ -145,6 +146,7 @@
 		if( this.options.backCtrl ) {
 			this.backCtrl.addEventListener('click', function() {
 				self._back();
+				filterProjects({hide: false});
 			});
 		}
 	};
@@ -281,6 +283,8 @@
 		var self = this;
 		bc.addEventListener('click', function(ev) {
 			ev.preventDefault();
+
+			filterProjects({hide: false});
 
 			// do nothing if this breadcrumb is the last one in the list of breadcrumbs
 			if( !bc.nextSibling || self.isAnimating ) {
