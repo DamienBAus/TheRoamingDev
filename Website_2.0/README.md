@@ -6,15 +6,15 @@ This repo contains the raw files for my personal portfolio website. It is open s
 Running the site locally is dead easy - just open the index.html file in the browser. This site suns off an FTP server, so it's basic af. That said, the construction of React components using JSON data on-the-fly is kind of cool :) 
 
 ### Javascript
-When editing the javascript in this project, you should use the `src/js/` folder. When you first start working, navigate to the this folder in the directory and run the following command in the terminal:
+When editing the javascript in this project, you should edit the `react_damien.jsx` file in the `src/js/` folder. When you first start working, navigate to the this folder in the directory and run the following command in the terminal:
 ```
 $ babel --presets es2015,react --watch src/js/ --out-dir js/
 ```
 
-This will turn the jsx code into vanilla javascript. This is also a watcher file, so you only have to do this at the beginning of your work and leave it to run, and it will work in the background.
+This will turn the jsx code into vanilla javascript. Babel is also a watcher, so you only have to do this at the beginning of your work and leave it to run, and it will work in the background.
 
 ### Stylesheets
-You should edite the `damien.less` file to update styles, not the css file directly. 
+You should edit the `damien.less` file to update styles, not the css file directly. 
 
 To see the changes reflected in the browser, in the Website_2.0 directory run the following command in the terminal:
 ```
