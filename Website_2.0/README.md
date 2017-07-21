@@ -1,5 +1,30 @@
-Blueprint: Multi-Level Menu
-=========
+# Damien Beard's Portfolio - 2.0
+
+This repo contains the raw files for my personal portfolio website. It is open source, so feel free to use inspiration/direct files from any part of it. The website itself is constructed using React to create project cards and populate the page (client-side). 
+
+### Running the project
+Running the site locally is dead easy - just open the index.html file in the browser. This site suns off an FTP server, so it's basic af. That said, the construction of React components using JSON data on-the-fly is kind of cool :) 
+
+### Javascript
+When editing the javascript in this project, you should edit the `react_damien.jsx` file in the `src/js/` folder. When you first start working, navigate to the this folder in the directory and run the following command in the terminal:
+```
+$ babel --presets es2015,react --watch src/js/ --out-dir js/
+```
+
+This will turn the jsx code into vanilla javascript. Babel is also a watcher, so you only have to do this at the beginning of your work and leave it to run, and it will work in the background.
+
+### Stylesheets
+You should edit the `damien.less` file to update styles, not the css file directly. 
+
+To see the changes reflected in the browser, in the Website_2.0 directory run the following command in the terminal:
+```
+lessc css/damien.less css/damien.css
+```
+Make sure the file is saved before you do this, otherwise nothing will show in the browser. 
+
+# Boilerplate for Menu:
+
+### Blueprint: Multi-Level Menu
 
 A simple multi-level menu with delayed item animations and optional breadcrumb navigation and back button. 
 
@@ -7,18 +32,6 @@ A simple multi-level menu with delayed item animations and optional breadcrumb n
 
 [Demo](http://tympanus.net/Blueprints/MultiLevelMenu/)
 
-The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration.
-
 Check out all of our Blueprints [here](http://tympanus.net/codrops/category/blueprints/)
 
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-
 Read more here: [License](http://tympanus.net/codrops/licensing/)
-
-[Organic Food Icons](http://tympanus.net/codrops/2015/03/19/freebie-organic-food-icon-set/) by Wojciech Zasina.
-
-[Feather Icons](http://colebemis.com/feather/) by Cole Bemis.
-
-Follow us: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
-
-[© Codrops 2015](http://www.codrops.com)
