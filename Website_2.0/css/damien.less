@@ -233,52 +233,52 @@ body {
 }
 
 .portfolio-nav {
-	.nav-info {
-		//color: #bdbdbd;
-	}
-	
-	nav {
-		background: #1c1d22;
-	}
-	
-	.menu__breadcrumbs {
-		box-shadow: none;
+  .nav-info {
+    //color: #bdbdbd;
+  }
+  
+  nav {
+    background: #1c1d22;
+  }
+  
+  .menu__breadcrumbs {
+    box-shadow: none;
         z-index: 3;
-		
-		a{
+    
+    a{
           color: @mainColor;
 
-			&:first-child {
-				line-height: 30px;
+      &:first-child {
+        line-height: 30px;
 
                 transition: color 0.5s ease;
-			}
+      }
 
           &:last-child {
             color: #bdbdbd;
           }
-		}
+    }
 
       .fa-fw {
         padding-right: 20px;
       }
-	}
-	
-	.menu__wrap {
-		top: 4.1em;
-		
-		.menu__item{
-			width: 100%;
-		}
-		
-		ul {
-			width: 100%;
-			overflow: auto;
-		}
-		
-		.menu__link {
-			padding-top: 0px;
-			padding-bottom: 0px;
+  }
+  
+  .menu__wrap {
+    top: 4.1em;
+    
+    .menu__item{
+      width: 100%;
+    }
+    
+    ul {
+      width: 100%;
+      overflow: auto;
+    }
+    
+    .menu__link {
+      padding-top: 0px;
+      padding-bottom: 0px;
 
             overflow: hidden;
             text-overflow: ellipsis;
@@ -300,20 +300,20 @@ body {
               }
             }
 
-			
-			.fa-fw {
-			  padding-left: 10px;
+      
+      .fa-fw {
+        padding-left: 10px;
 
               font-size: 16px;
-			}
-			
-			.material-icons {
-				display: inline;
-				vertical-align: middle;
-				padding-right: 11px;
-				padding-left: 10px;
-				font-size: 19px;
-			}
+      }
+      
+      .material-icons {
+        display: inline;
+        vertical-align: middle;
+        padding-right: 11px;
+        padding-left: 10px;
+        font-size: 19px;
+      }
 
           .menu-link-name{
             text-transform: uppercase;
@@ -321,41 +321,41 @@ body {
             font-weight: 400;
             letter-spacing: 1.3px;
           }
-		}
-		
-	}
-	
-	.fa-fw {
-		padding-right: 30px;
-		vertical-align: middle;
-	}
+    }
+    
+  }
+  
+  .fa-fw {
+    padding-right: 30px;
+    vertical-align: middle;
+  }
 
     .menu__item.contact-item {
         padding-top: ~"calc(100vh - 530px)";
         display: inline-block;
         width: auto;
 
-		text-align: center;
-		
-		.nav-info{
+    text-align: center;
+    
+    .nav-info{
           text-align: left;
-			
-			/* We need to over-ride Materliaize's transition delay to stop these buttons reappearing */
-			-webkit-transition: initial;
-			transition: initial;
-			
-			.contact-icon{
-				padding-left: 9.5px;
-				padding-bottom: 2px;
-				font-size: 22px;
-			}
+      
+      /* We need to over-ride Materliaize's transition delay to stop these buttons reappearing */
+      -webkit-transition: initial;
+      transition: initial;
+      
+      .contact-icon{
+        padding-left: 9.5px;
+        padding-bottom: 2px;
+        font-size: 22px;
+      }
 
             &:hover, &:focus{
                 color: @mainColor;
             }
-		}
-		
-		&.first-button{
+    }
+    
+    &.first-button{
             padding-left: 44px;
 
             @media screen and (max-width: 600px) {
@@ -365,18 +365,18 @@ body {
             .contact-icon{
               padding-left: 8.5px;
             }
-		}
-	}
-	
-	.mobile-only{
-		display: none;
-	}
-	
-	@media screen and (max-width: 40em) {
-		.mobile-only{
-			display: block;
-		}
-	}
+    }
+  }
+  
+  .mobile-only{
+    display: none;
+  }
+  
+  @media screen and (max-width: 40em) {
+    .mobile-only{
+      display: block;
+    }
+  }
 }
 
 .profile-name {
@@ -965,4 +965,5 @@ button:focus {
 
 .material-icons {
   text-rendering: optimizeLegibility;
+
 }
