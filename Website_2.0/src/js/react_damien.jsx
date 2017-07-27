@@ -185,7 +185,7 @@ var ProjectCards = React.createClass({
 
     return <span>
       {projectItems.map((project, i) => {
-        return <Project projectData={project} isLastItem={i === projectItems.length - 1} />
+        return <Project number = {i} projectData={project} isLastItem={i === projectItems.length - 1} />
       })}
     </span>;
   }
@@ -198,15 +198,15 @@ var Project = React.createClass({
         project = self.props.projectData,
         extraClasses = (self.props.isLastItem) ? " hide-on-med-only" : "";
 
-    return (
+    return ( 
       <div className={"col s12 m6 l4 xl3" + extraClasses}>
         <a href="#"
            className="card home-card project-card home-card-link"
            data-modal-id="modal-trigger"
            data-type="cd-modal-trigger"
            onClick={openProjectModal.bind(self, project)}>
-            <div className="card-image">
-              <img src={"img/" + project.ID + "_thumb_v2.jpg"} />
+            <div className={"card-image projectPicNumber"+self.props.number}>
+              <img/>
             </div>
             <div className="card-content">
               <p className="card-text">{project.shortTitle}<span className="project-word"/></p>
@@ -295,6 +295,7 @@ var AboutModal = React.createClass({
     );
   }
 });
+
 
 var ProjectModal = React.createClass({
 

@@ -248,7 +248,7 @@ var ProjectCards = React.createClass({
       'span',
       null,
       projectItems.map(function (project, i) {
-        return React.createElement(Project, { projectData: project, isLastItem: i === projectItems.length - 1 });
+        return React.createElement(Project, { number: i, projectData: project, isLastItem: i === projectItems.length - 1 });
       })
     );
   }
@@ -275,8 +275,8 @@ var Project = React.createClass({
           onClick: openProjectModal.bind(self, project) },
         React.createElement(
           'div',
-          { className: 'card-image' },
-          React.createElement('img', { src: "img/" + project.ID + "_thumb_v2.jpg" })
+          { className: "card-image projectPicNumber" + self.props.number },
+          React.createElement('img', null)
         ),
         React.createElement(
           'div',
