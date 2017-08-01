@@ -185,7 +185,7 @@ var ProjectCards = React.createClass({
 
     return <span>
       {projectItems.map((project, i) => {
-        return <Project projectData={project} isLastItem={i === projectItems.length - 1} />
+        return <Project number = {i} projectData={project} isLastItem={i === projectItems.length - 1} />
       })}
     </span>;
   }
@@ -196,17 +196,21 @@ var Project = React.createClass({
   render: function() {
     var self = this,
         project = self.props.projectData,
-        extraClasses = (self.props.isLastItem) ? " hide-on-med-only" : "";
+        extraClasses = (self.props.isLastItem) ? " hide-on-med-only" : "",
+        picRatio = (self.props.number/7)* 100 +'%';
 
-    return (
+    return ( 
       <div className={"col s12 m6 l4 xl3" + extraClasses}>
         <a href="#"
            className="card home-card project-card home-card-link"
            data-modal-id="modal-trigger"
            data-type="cd-modal-trigger"
            onClick={openProjectModal.bind(self, project)}>
-            <div className="card-image">
-              <img src={"img/" + project.ID + "_thumb_v2.jpg"} />
+            <div className={"card-image projectPicNumber"+self.props.number}>
+              <div style={{backgroundImage:'url(img/project_sprites-min.jpg)', 
+              backgroundRepeat: 'no-repeat', backgroundPositionX: '50%', clipPath:'polygon( 0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+              paddingBottom: '82.6%', backgroundSize: 'cover', backgroundPositionY: picRatio}}>
+              </div>
             </div>
             <div className="card-content">
               <p className="card-text">{project.shortTitle}<span className="project-word"/></p>
@@ -295,6 +299,7 @@ var AboutModal = React.createClass({
     );
   }
 });
+
 
 var ProjectModal = React.createClass({
 

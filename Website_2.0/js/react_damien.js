@@ -248,7 +248,7 @@ var ProjectCards = React.createClass({
       'span',
       null,
       projectItems.map(function (project, i) {
-        return React.createElement(Project, { projectData: project, isLastItem: i === projectItems.length - 1 });
+        return React.createElement(Project, { number: i, projectData: project, isLastItem: i === projectItems.length - 1 });
       })
     );
   }
@@ -261,7 +261,8 @@ var Project = React.createClass({
   render: function render() {
     var self = this,
         project = self.props.projectData,
-        extraClasses = self.props.isLastItem ? " hide-on-med-only" : "";
+        extraClasses = self.props.isLastItem ? " hide-on-med-only" : "",
+        picRatio = self.props.number / 7 * 100 + '%';
 
     return React.createElement(
       'div',
@@ -275,8 +276,10 @@ var Project = React.createClass({
           onClick: openProjectModal.bind(self, project) },
         React.createElement(
           'div',
-          { className: 'card-image' },
-          React.createElement('img', { src: "img/" + project.ID + "_thumb_v2.jpg" })
+          { className: "card-image projectPicNumber" + self.props.number },
+          React.createElement('div', { style: { backgroundImage: 'url(img/project_sprites-min.jpg)',
+              backgroundRepeat: 'no-repeat', backgroundPositionX: '50%', clipPath: 'polygon( 0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+              paddingBottom: '82.6%', backgroundSize: 'cover', backgroundPositionY: picRatio } })
         ),
         React.createElement(
           'div',

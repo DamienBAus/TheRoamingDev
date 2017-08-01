@@ -12,22 +12,22 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><!-- Roboto Font -->
 	<!--link href="css/Roboto.css" rel='stylesheet' type='text/css'> <!-- local version for development -->
 
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/materialize.css"> <!-- Materialize style -->
+	<link rel="stylesheet" href="css/style.min.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/materialize.min.css"> <!-- Materialize style -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Materialize icons -->
 	<!--link href="css/MaterialIcons.css" rel='stylesheet' type='text/css'> <!-- local version for development -->
 
 
 	<!-- demo styles -->
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.min.css" />
 	<!-- menu styles -->
-	<link rel="stylesheet" type="text/css" href="css/menu-component.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu-component.min.css" />
 	
 	<!-- Icon styles -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	
 	<!-- Damien's styles -->
-	<link rel="stylesheet" type="text/css" href="css/damien.css" />
+	<link rel="stylesheet" type="text/css" href="css/damien.min.css" />
 
 	<!-- favicon stuff -->
 	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
@@ -79,8 +79,9 @@
                 <div class="col s12 m6 l4 xl3 non-project">
                     <a href="#" data-modal-id="modal-trigger" data-type="cd-modal-trigger">
                         <div id="about-card" class="card home-card about-me-card">
-							<div class="card-image">
-								<img src="img/profile_thumb.jpg" />
+							<div class="card-image selfPic">
+							 	<div>
+							 	</div>
 							</div>
                             <div class="card-content">
                                 <p class="card-text">About Me</p>
@@ -94,7 +95,7 @@
 				<div class="col s12 m6 l4 xl3 back-card">
 					<a href="#">
 						<div class="card home-card">
-							<div class="card-image">
+							<div class="card-image profilePic">
 								<img src="img/back_thumb.jpg" />
 							</div>
 							<div class="card-content">
@@ -107,7 +108,7 @@
                 <div class="col s12 m12 l12 xl9 non-project">
                     <a href="#" data-modal-id="modal-trigger" data-type="cd-modal-trigger">
                         <div id="contact-card" class="card home-card contact-card">
-                            <div class="card-image contact-container">
+                            <div class="card-image contact-container profilePic">
 								<img src="img/contact_v2.jpg" />
                             </div>
                             <div class="card-content">
@@ -138,7 +139,7 @@
             <div id="cd-modal-content" class="cd-modal-content">
 				<div class="row">
 					<div class="col s12 m5 l5 xl5">
-						<img class="about-me-pic" src="img/about-me-pic.jpg" />
+						<img class="about-me-pic profilePic" src="img/about-me-pic.jpg" />
 					</div>
 
 					<div class="col hide-on-small-only m1 l1 xl1 spacer-col" ></div>
@@ -217,7 +218,7 @@
 	<script src="js/modernizr-custom.js"></script>
 	<script src="js/project_data.js"></script>
 
-    <script src="js/materialize.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/snap.svg-min.js"></script>
     <script src="js/main_modal.js"></script> <!-- Resource jQuery -->
 
@@ -226,11 +227,11 @@
     <!--script src="https://fb.me/react-dom-0.14.7.min.js"></script> <!-- React DOM -->
 	<script src="js/react-dom.min.js"></script> <!-- local version for development -->
 
-    <script src="js/react_damien.js"></script>
+    <script src="js/react_damien.min.js"></script>
 
-    <script src="js/classie.js"></script>
+    <script src="js/classie.min.js"></script>
 
-	<script src="js/initatilise_menu.js"></script>
+	<script src="js/initatilise_menu.min.js"></script>
 	<script>
 		(function() {
 			var menuEl = document.getElementById('ml-menu'),
@@ -241,22 +242,17 @@
 					// itemsDelayInterval : 60, // delay between each menu item sliding animation
 					onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
 				});
-
 			// mobile menu toggle
 			var openMenuCtrl = document.querySelector('.action--open'),
 				closeMenuCtrl = document.querySelector('.action--close');
-
 			openMenuCtrl.addEventListener('click', openMenu);
 			closeMenuCtrl.addEventListener('click', closeMenu);
-
 			function openMenu() {
 				classie.add(menuEl, 'menu--open');
 			}
-
 			function closeMenu() {
 				classie.remove(menuEl, 'menu--open');
 			}
-
 			function loadDummyData(ev) {
 				closeMenu();
 				setTimeout(function() {
@@ -265,14 +261,11 @@
 					}
 				}, 700);
 			}
-
 			globalNavMenu = mlmenu;
 		})();
-
 		$(document).ready(function(){
 			$('.tooltipped').tooltip({delay: 25});
 		});
-
 		$('.home-reset').click(resetHomePage);
 		$('.back-card').click(resetHomePage.bind(null, {filterOptions:{animationTime: 800}}));
 	</script>
@@ -283,10 +276,8 @@
 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 		ga('create', 'UA-60757294-1', 'auto');
 		ga('send', 'pageview');
-
 	</script>
 
 </body>
