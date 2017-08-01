@@ -261,7 +261,8 @@ var Project = React.createClass({
   render: function render() {
     var self = this,
         project = self.props.projectData,
-        extraClasses = self.props.isLastItem ? " hide-on-med-only" : "";
+        extraClasses = self.props.isLastItem ? " hide-on-med-only" : "",
+        picRatio = self.props.number / 7 * 100 + '%';
 
     return React.createElement(
       'div',
@@ -276,7 +277,9 @@ var Project = React.createClass({
         React.createElement(
           'div',
           { className: "card-image projectPicNumber" + self.props.number },
-          React.createElement('img', null)
+          React.createElement('div', { style: { backgroundImage: 'url(img/project_sprites-min.jpg)',
+              backgroundRepeat: 'no-repeat', backgroundPositionX: '50%', clipPath: 'polygon( 0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+              paddingBottom: '82.6%', backgroundSize: 'cover', backgroundPositionY: picRatio } })
         ),
         React.createElement(
           'div',
